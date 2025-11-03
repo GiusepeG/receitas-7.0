@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Content Assistant for Medical Professionals</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1565ef",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101722",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 px-4 sm:px-8 md:px-10 lg:px-20">
+<div class="layout-content-container flex max-w-[360px] flex-1">
+<div class="flex h-full w-full min-h-[900px] flex-col justify-between bg-white dark:bg-[#1C2532] border border-[#DADCE0] dark:border-[#3C4043] rounded-xl shadow-lg">
+<div class="flex flex-col gap-4 p-4 flex-grow">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Abstract blue and white logo for a medical assistant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8hC8VqaxFfO_zHd9XB7wtrt16fazgmxRlF9QWcTCO6fDYqgvMC69fUh73Ma0cFAxwOf1wSFUFOPuiUrbmHzxuOAppubiQ6qvEvmNEwUFHKGLpYYQ9TWhFTjhH_qWOoiJ5HJAmId_gEJSvAUeNbt2ubptwq9gDcLRjwpiQqrV01frxb8rW1ZxeilZv3x4p2k3MhVhBEarrpt_jHMI224xh2cRWRYEwvzUqLtcjzJYqh_XTBXiOI4JbtdbYOx_c_7x1caDUY7d3-QA");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111318] dark:text-white text-base font-medium leading-normal">Content Assistant</h1>
+<p class="text-[#617089] dark:text-gray-400 text-sm font-normal leading-normal">for Medical Professionals</p>
+</div>
+</div>
+<div class="border-b border-[#DADCE0] dark:border-[#3C4043]"></div>
+<div class="flex gap-2 p-1 flex-wrap" data-testid="filter-buttons">
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111318] dark:text-white text-base font-bold leading-tight tracking-[-0.015em] pt-2">Template Palette</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="w-full rounded-lg border border-[#DADCE0] dark:border-[#3C4043] bg-background-light dark:bg-background-dark h-10 pl-10 pr-4 text-sm text-[#111318] dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search templates..." type="text" data-testid="search-input"/>
+</div>
+<div class="flex flex-col gap-2 h-48 overflow-y-auto pr-2" data-testid="template-palette">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111318] dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">Staging Area</h2>
+<div class="relative flex flex-col gap-2 border border-dashed border-[#DADCE0] dark:border-[#3C4043] rounded-lg p-2">
+<div class="h-40 overflow-y-auto pr-1">
+<div class="flex flex-col gap-2" data-testid="staging-area">
+</div>
+</div>
+<div class="flex w-full gap-2 mt-2">
+<button class="flex items-center justify-center gap-2 w-3/4 h-10 bg-[#1A73E8] text-white rounded-lg text-sm font-bold" data-testid="append-button">
+<span class="material-symbols-outlined">add</span>
+<span>Append</span>
+</button>
+<button class="flex items-center justify-center w-1/4 h-10 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm font-bold hover:bg-gray-300 dark:hover:bg-gray-600" title="Clear Staging Area" data-testid="clear-button">
+<span>Clear</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-[#DADCE0] dark:border-[#3C4043]">
+<div class="flex w-full gap-3">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#D93025] text-white text-sm font-bold leading-normal tracking-[0.015em] h-10 px-4">
+<span class="material-symbols-outlined text-xl">bolt</span>
+<span>AI Fast</span>
+</button>
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#9334E6] text-white text-sm font-bold leading-normal tracking-[0.015em] h-10 px-4">
+<span class="material-symbols-outlined text-xl">auto_awesome</span>
+<span>AI Generate</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    google.script.run.withSuccessHandler(data => {
+      const templates = JSON.parse(data);
+      const app = new TemplateApp(templates);
+      app.init();
+    }).getTemplates();
+  });
+
+  class TemplateApp {
+    constructor(templates) {
+      this.templates = templates;
+      this.items = Object.values(templates).flatMap(category => category.items);
+      this.stagingArea = new Set();
+      this.filterButtonsContainer = document.querySelector('[data-testid="filter-buttons"]');
+      this.templatePaletteContainer = document.querySelector('[data-testid="template-palette"]');
+      this.stagingAreaContainer = document.querySelector('[data-testid="staging-area"]');
+      this.searchInput = document.querySelector('[data-testid="search-input"]');
+      this.appendButton = document.querySelector('[data-testid="append-button"]');
+      this.clearButton = document.querySelector('[data-testid="clear-button"]');
+    }
+
+    init() {
+      this.renderFilterButtons();
+      this.renderTemplatePalette(this.items);
+      this.addEventListeners();
+    }
+
+    renderFilterButtons() {
+      const abbreviations = ['All', ...new Set(Object.values(this.templates).map(category => category.abbreviation))];
+      this.filterButtonsContainer.innerHTML = abbreviations.map(abbr => `
+        <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg ${abbr === 'All' ? 'bg-primary text-white' : 'bg-background-light dark:bg-background-dark border border-[#DADCE0] dark:border-[#3C4043] hover:bg-gray-200 dark:hover:bg-gray-700'} pl-4 pr-4 text-sm font-medium leading-normal" data-filter="${abbr}">
+          ${abbr}
+        </button>
+      `).join('');
+    }
+
+    renderTemplatePalette(items) {
+      this.templatePaletteContainer.innerHTML = items.map(item => `
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-700">
+          <div class="w-1 h-6 rounded-full" style="background-color: ${item.color || '#000000'};"></div>
+          <p class="flex-grow text-sm text-[#3C4043] dark:text-gray-300 truncate">${item.title}</p>
+          <button class="flex items-center justify-center shrink-0 size-7 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 text-[#3C4043] dark:text-gray-300" title="Insert" data-title="${item.title}">
+            <span class="material-symbols-outlined text-xl">start</span>
+          </button>
+          <button class="flex items-center justify-center shrink-0 size-7 rounded-md bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 text-[#3C4043] dark:text-gray-300" title="Add" data-title="${item.title}">
+            <span class="material-symbols-outlined text-xl">add</span>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    renderStagingArea() {
+      this.stagingAreaContainer.innerHTML = [...this.stagingArea].map(title => `
+        <div class="relative inline-block w-fit-content max-w-full group">
+          <div class="flex items-center gap-2 py-1.5 pl-3 pr-6 rounded-lg bg-background-light dark:bg-background-dark border border-[#DADCE0] dark:border-[#3C4043]">
+            <p class="text-sm text-[#3C4043] dark:text-gray-300 truncate">${title}</p>
+          </div>
+          <button class="absolute top-1 right-1 flex items-center justify-center w-5 h-5 rounded-full text-gray-400 dark:text-gray-500 bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-700 opacity-0 group-hover:opacity-100 transition-opacity" data-title="${title}">
+            <span class="material-symbols-outlined text-sm">close</span>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    addEventListeners() {
+      this.filterButtonsContainer.addEventListener('click', e => {
+        const button = e.target.closest('button');
+        if (button) {
+          const filter = button.dataset.filter;
+          this.filterItems(filter);
+        }
+      });
+
+      this.searchInput.addEventListener('input', e => {
+        this.searchItems(e.target.value);
+      });
+
+      this.templatePaletteContainer.addEventListener('click', e => {
+        const button = e.target.closest('button');
+        if (!button) return;
+
+        const title = button.dataset.title;
+        const item = this.findItemByTitle(title);
+
+        if (button.title === 'Insert') {
+          this.insertInDocument(item.content);
+        } else if (button.title === 'Add') {
+          this.addToStaging(item);
+        }
+      });
+
+      this.stagingAreaContainer.addEventListener('click', e => {
+        const button = e.target.closest('button');
+        if (!button) return;
+
+        const title = button.dataset.title;
+        this.removeFromStaging(title);
+      });
+
+      this.appendButton.addEventListener('click', () => {
+        const content = [...this.stagingArea].map(title => this.findItemByTitle(title).content).join('\\n\\n');
+        this.insertInDocument(content);
+      });
+
+      this.clearButton.addEventListener('click', () => {
+        this.stagingArea.clear();
+        this.renderStagingArea();
+      });
+    }
+
+    filterItems(filter) {
+      if (filter === 'All') {
+        this.renderTemplatePalette(this.items);
+      } else {
+        const filteredItems = Object.values(this.templates)
+          .filter(category => category.abbreviation === filter)
+          .flatMap(category => category.items);
+        this.renderTemplatePalette(filteredItems);
+      }
+    }
+
+    searchItems(query) {
+      const searchWords = query.toLowerCase().split(/\s+/);
+      const filteredItems = this.items.filter(item =>
+        searchWords.every(word => this.itemMatchesWord(item, word))
+      );
+      this.renderTemplatePalette(filteredItems);
+    }
+
+    itemMatchesWord(item, word) {
+      return item.title.toLowerCase().includes(word) ||
+             (item.tags && item.tags.some(tag => tag.toLowerCase().includes(word)));
+    }
+
+    addToStaging(item) {
+      const sortedItems = this.topologicalSort(item);
+      sortedItems.forEach(i => this.stagingArea.add(i.title));
+      this.renderStagingArea();
+    }
+
+    removeFromStaging(title) {
+      this.stagingArea.delete(title);
+      this.renderStagingArea();
+    }
+
+    topologicalSort(startItem) {
+      const sorted = [];
+      const visited = new Set();
+
+      const visit = (item) => {
+        if (!item || visited.has(item.title)) {
+          return;
+        }
+
+        visited.add(item.title);
+
+        if (item.requirement) {
+          const dependency = this.findItemByTitle(item.requirement);
+          visit(dependency);
+        }
+
+        sorted.push(item);
+      };
+
+      visit(startItem);
+      return sorted;
+    }
+
+    findItemByTitle(title) {
+      return this.items.find(item => item.title === title);
+    }
+
+    insertInDocument(content) {
+        google.script.run
+            .withSuccessHandler(() => {})
+            .withFailureHandler(err => alert(err.message))
+            .insertText(content);
+    }
+  }
+</script>
+</body></html>
