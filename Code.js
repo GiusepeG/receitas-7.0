@@ -35,10 +35,11 @@ function getTemplates() {
   const htmlContent = HtmlService.createHtmlOutputFromFile('sheetLibrary.json.html').getContent();
   const jsonString = htmlContent.substring(htmlContent.indexOf('{'), htmlContent.lastIndexOf('}') + 1);
   try {
-    return JSON.parse(jsonString);
+    const data = JSON.parse(jsonString);
+    return data.templates || []; // Return the array directly, or an empty array if it doesn't exist
   } catch (e) {
     console.error("Failed to parse JSON from sheetLibrary.json.html: " + e.message);
-    return {};
+    return []; // Return an empty array on failure
   }
 }
 

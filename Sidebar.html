@@ -72,8 +72,8 @@
         document.getElementById('clear-button').addEventListener('click', clearStagingArea);
       });
 
-      function onDataLoaded(data) {
-        allTemplates = data.templates;
+      function onDataLoaded(templates) {
+        allTemplates = templates;
         renderCategories();
         renderTemplatePalette(allTemplates);
       }
